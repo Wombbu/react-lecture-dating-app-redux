@@ -24,6 +24,7 @@ const Image = styled.img`
   flex: 1;
   object-fit: cover;
   max-width: 100%;
+  filter: blur(10px);
 `;
 
 const BottomInfo = styled.div`
@@ -32,6 +33,8 @@ const BottomInfo = styled.div`
   justify-content: center;
   align-items: center;
   color: grey;
+  background-color: white;
+  z-index: 1;
 `;
 
 export const DateCard = props => {

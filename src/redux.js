@@ -13,8 +13,8 @@ export const fetchRandomUser = () => (dispatch) => {
     dispatch({type: FETCH_START});
   
     fetch("https://randomuser.me/api/")
-      .then((response: Response) => response.json())
-      .then((randomUser: ApiTypes.Result) => {
+      .then((response) => response.json())
+      .then((randomUser) => {
           dispatch({type: FETCH_SUCCES, payload: randomUser.results[0]})
           dispatch({type: 'RESET_SWIPE'})
       })
@@ -28,7 +28,7 @@ export const fetchRandomUser = () => (dispatch) => {
   });
 
 // Reducer
-const reducer = (state: State, action: AnyAction) => {
+const reducer = (state, action) => {
   switch(action.type) {
     case FETCH_START:
       return {...state, loading: true};

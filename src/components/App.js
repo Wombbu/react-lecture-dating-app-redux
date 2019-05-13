@@ -79,7 +79,7 @@ const App = props => {
   );
 };
 
-const mapStateToProps = (state: State) => ({
+const mapStateToProps = (state) => ({
   response: state.response,
   loading: state.loading,
   swipeStatus: state.swipeStatus
